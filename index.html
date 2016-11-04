@@ -4,7 +4,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-
+  <!-- <script type="text/javascript" src="jquery-1.8.3.js"></script> -->
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -16,5 +17,12 @@
       How is your day today?
     </p>
   </div>
+  <div>
+    <h2 id="weather" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1">i</h2>
+  </div>
+
+  <script>
+    document.getElementById("weather").innerHTML = JSON.stringify(httpGet("http://api.openweathermap.org/data/2.5/weather?id=5380748&APPID=13de2629d701eaa2dfe0e728ad14beab"));
+  </script>
 </body>
 </html>
